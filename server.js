@@ -6,6 +6,10 @@ const session = require('express-session');
 const flash = require('connect-flash');
 const passport = require('./config/ppConfig');
 const isLoggedIn = require('./middleware/isLoggedIn');
+const user = require('./models/user');
+
+
+const { Ingredients, Inventory } = require('./models');
 
 const SECRET_SESSION = process.env.SECRET_SESSION;
 console.log(SECRET_SESSION);
@@ -36,9 +40,39 @@ app.use((req, res, next) => {
   next();
 });
 
-app.get('/', (req, res) => {
-  res.render('index');
+app.get('/', async (req, res) => {
+  try {
+    //const allIngredients = await Ingredients.findAll({});
+
+    const parsedIngredients = await Ingredients.findAll({});
+    console.log(parsedIngredients);
+
+    const parsedInventory = await Inventory.findAll({});
+    console.log(parsedInventory);
+
+    res.render('index', { ingredients: parsedIngredients, inventory: parsedInventory });
+
+  } catch (err) {
+    console.log(err);
+  }
 })
+
+/*
+      app.get('/users', async (req, res) => {
+        try {
+            const allUsers = await User.findAll({});
+            
+            const parsedUsers = allUsers.map(u => u.toJSON())
+            console.log(parsedUsers);
+
+            //resizeBy.render('users/index', {users: parsedUsers});
+            res.render('users/index', { users: parsedUsers });
+            
+        } catch (err) {
+            console.log(err);
+        }
+      })
+*/
 
 app.use('/auth', require('./controllers/auth'))
 
