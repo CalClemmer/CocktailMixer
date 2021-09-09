@@ -20,6 +20,8 @@ My Ingredients
     <% }); %>
 </ul>
 
+<p>User ID: <%= id %></p>
+
 <script>
 
 function searchBar() {
@@ -46,7 +48,9 @@ async function loadInventory(){
     try {
         //const allIngredients = await Ingredients.findAll({});
 
-        const parsedIngredients = await Ingredients.findAll({});
+        const parsedIngredients = await Ingredients.findAll({
+            
+        });
         console.log(parsedIngredients);
 
         res.render('index', { ingredients: parsedIngredients });
@@ -56,22 +60,18 @@ async function loadInventory(){
     }
 }
 
-async function addIngredient(name, species, description) {
+/*
+async function addIngredient(ingredientId) {
 
-try {
-const user1 = await User.findOne({
-    where: {id: 1},
-    include: [Pet]
-
-})
-console.log(user1.toJSON());
-
-const newPet = await user1.createPet({name, species, description})
-console.log(newPet.toJSON());
-
-} catch (error) {
-    console.log(error);
+    try {
+        console.log('Hum')
+        const inventory = await Inventory.create({userId: 1, ingredientId: 1})
+    } catch (error) {
+        console.log(error);
+    }
 }
-}
+
+addIngredient();
+*/
 
 </script>

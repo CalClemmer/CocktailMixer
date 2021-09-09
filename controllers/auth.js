@@ -2,7 +2,7 @@ const express = require('express');
 var router = express.Router();
 const passport = require('../config/ppConfig');
 
-const { User } = require('../models');
+const { User, Inventory, Ingredients } = require('../models');
 
   router.get('/signup', (req, res) => {
     res.render('auth/signup');
@@ -16,6 +16,11 @@ const { User } = require('../models');
     req.logOut(); // logs the user out of the session
     req.flash('success', 'Logging out... See you next time!');
     res.redirect('/');
+  });
+
+// trying to add ingredients to user inventory 
+  router.post('/', function(req, res) {
+    console.log('Taco taco');
   });
 
   router.post('/login', passport.authenticate('local', {

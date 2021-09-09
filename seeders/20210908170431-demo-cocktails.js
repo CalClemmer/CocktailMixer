@@ -3,6 +3,7 @@
 const cocktailSeedArray = [];
 const ingredientSeedArray = [];
 const recipeSeedArray = [];
+const invSeedArray = [];
 /*
         const whiteRussian = {
           name: 'WhiteRussian',
@@ -34,32 +35,40 @@ const recipeSeedArray = [];
       ingredientSeedArray.push(halfHalf);
 
 */
-
-const wR1 = {
-  cocktailId: 1,
+const inv1 = {
+  userId: 1,
   ingredientId: 1,
-  ingredientAmount: 1,
-  createdAt: new Date().toISOString(),
-  updatedAt: new Date().toISOString(),
-}
-const wR2 = {
-  cocktailId: 1,
-  ingredientId: 2,
-  ingredientAmount: 1,
-  createdAt: new Date().toISOString(),
-  updatedAt: new Date().toISOString(),
-}
-const wR3 = {
-  cocktailId: 1,
-  ingredientId: 3,
-  ingredientAmount: 1,
   createdAt: new Date().toISOString(),
   updatedAt: new Date().toISOString(),
 }
 
-recipeSeedArray.push(wR1);
-recipeSeedArray.push(wR2);
-recipeSeedArray.push(wR3);
+invSeedArray.push(inv1);
+
+// const wR1 = {
+//   cocktailId: 1,
+//   ingredientId: 1,
+//   ingredientAmount: 1,
+//   createdAt: new Date().toISOString(),
+//   updatedAt: new Date().toISOString(),
+// }
+// const wR2 = {
+//   cocktailId: 1,
+//   ingredientId: 2,
+//   ingredientAmount: 1,
+//   createdAt: new Date().toISOString(),
+//   updatedAt: new Date().toISOString(),
+// }
+// const wR3 = {
+//   cocktailId: 1,
+//   ingredientId: 3,
+//   ingredientAmount: 1,
+//   createdAt: new Date().toISOString(),
+//   updatedAt: new Date().toISOString(),
+// }
+
+// recipeSeedArray.push(wR1);
+// recipeSeedArray.push(wR2);
+// recipeSeedArray.push(wR3);
 
 
 
@@ -69,8 +78,8 @@ module.exports = {
   up: async (queryInterface, Sequelize) => {
     //await queryInterface.bulkInsert('Cocktails', cocktailSeedArray, {})
     //await queryInterface.bulkInsert('Ingredients', ingredientSeedArray, {})
-
-    await queryInterface.bulkInsert('Recipes', recipeSeedArray, {})
+    await queryInterface.bulkInsert('Inventories', invSeedArray, {})
+    //await queryInterface.bulkInsert('Recipes', recipeSeedArray, {})
 
     /**
      * Add seed commands here.
@@ -85,7 +94,8 @@ module.exports = {
 
   down: async (queryInterface, Sequelize) => {
     // await queryInterface.bulkDelete('users', null, {});
-    await queryInterface.bulkDelete('Recipes', null, {});
+    //await queryInterface.bulkDelete('Recipes', null, {});
+    await queryInterface.bulkDelete('Inventories', null, {});
 
 
     /**

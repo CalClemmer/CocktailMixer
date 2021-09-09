@@ -40,9 +40,11 @@ app.use((req, res, next) => {
   next();
 });
 
-app.get('/', async (req, res) => {
+app.get('/', isLoggedIn, async (req, res) => {
   try {
     //const allIngredients = await Ingredients.findAll({});
+
+    const { id } = req.user.get(); 
 
     const parsedIngredients = await Ingredients.findAll({});
     console.log(parsedIngredients);
@@ -50,7 +52,7 @@ app.get('/', async (req, res) => {
     const parsedInventory = await Inventory.findAll({});
     console.log(parsedInventory);
 
-    res.render('index', { ingredients: parsedIngredients, inventory: parsedInventory });
+    res.render('index', { ingredients: parsedIngredients, inventory: parsedInventory, id });
 
   } catch (err) {
     console.log(err);
