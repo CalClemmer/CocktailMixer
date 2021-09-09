@@ -46,25 +46,24 @@ app.get('/', isLoggedIn, async (req, res) => {
     //const allIngredients = await Ingredients.findAll({});
 
     const { id } = req.user.get(); 
-
-    const parsedIngredients = await Ingredients.findAll({});
     //console.log(parsedIngredients);
     const parsedRecipes = await Recipes.findAll({});
-
+    
     // Getting ingredients in user inventory
     const parsedInventory = await Inventory.findAll({
       where: {userId: id}
     });
-
+    
     //ingredientIds has all the Ids of ingredients we have 
     const ingredientIds = [];
     parsedInventory.forEach(function(inv){
       ingredientIds.push(inv.ingredientId)
     })
-
+    
     const ingredientNames = await Ingredients.findAll({
       where: {id: ingredientIds}
     })
+    
     const filteredCocktailsIds = [];
     parsedRecipes.forEach(function(recipe){
       // returns true if recipe ingredient is NOT in inventory
@@ -81,9 +80,17 @@ app.get('/', isLoggedIn, async (req, res) => {
       }
     });
     
-
-
-
+        const parsedIngredients = await Ingredients.findAll({
+          where: {
+            id: {
+              [Op.not]: ingredientIds
+            }
+          }
+        });
+    
+    
+    
+    
     // console.log('FILTERED COCKTAILS', filteredCocktailsIds);
     // console.log('PARSED INVENTORY', parsedInventory);
     // console.log('ingredientNames', ingredientNames);
@@ -131,7 +138,14 @@ app.post('/addingredient', async function(req, res) {
   //console.log('LOL LOOK HERE', req.body);
   //These both work fantastically for grabbing the form's input data 
   //console.log('Doggo?', req.body.ingredient);
-  let ingredientId = req.body.ingredient
+  let ingredientName = req.body.ingredient
+
+  let ingredient = await Ingredients.findOne({
+        where: {name: ingredientName}
+    });
+
+  let ingredientId = ingredient.id
+  console.log('INGREDIENT INGREDIENT ID ID ID ', ingredientId)
 
   const addIngredient = await Inventory.create({ userId: id, ingredientId });
   console.log(addIngredient.toJSON());
@@ -147,8 +161,12 @@ app.post('/deleteingredient', async function(req, res) {
   //console.log('Doggo?', req.body.ingredient);
   let ingredientId = req.body.ingredient
 
-  const delIngredient = await Inventory.delete({ userId: id, ingredientId });
-  console.log(delIngredient.toJSON());
+  const delIngredient = await Inventory.destroy({ 
+    where: {
+      userId: id, 
+      ingredientId 
+    }
+  });
 
   res.redirect('/');
 });
