@@ -14,13 +14,32 @@
     <% }); %>
 </ul>
 My Ingredients
+
+
 <ul>
-    <% inventory.forEach(function(ingredient) { %>
-    <li><a href="#"> <%= ingredient.name %> </a></li>
+    <% inventory.forEach(function(inventory) { %>
+    <li><a href="#"> <%= inventory.name %> </a></li>
     <% }); %>
 </ul>
 
 <p>User ID: <%= id %></p>
+
+Cocktails You Can Make!
+
+<ul>
+    <% cocktails.forEach(function(cocktail) { %>
+    <li><a href="#"> <%= cocktail.name %> </a></li>
+    <% }); %>
+</ul>
+
+<form method="POST" action="/addingredient">
+
+  <label for="addingredient">Population</label>
+  <input id="addingredient" type="text" name="ingredient">
+
+  <input type="submit">
+</form>
+
 
 <script>
 

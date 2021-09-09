@@ -19,8 +19,9 @@ const { User, Inventory, Ingredients } = require('../models');
   });
 
 // trying to add ingredients to user inventory 
-  router.post('/', function(req, res) {
+  router.post('/addingredient', function(req, res) {
     console.log('Taco taco');
+    res.redirect('/');
   });
 
   router.post('/login', passport.authenticate('local', {

@@ -35,40 +35,48 @@ const invSeedArray = [];
       ingredientSeedArray.push(halfHalf);
 
 */
-const inv1 = {
+const OJ = {
   userId: 1,
-  ingredientId: 1,
+  ingredientId: 4,
   createdAt: new Date().toISOString(),
   updatedAt: new Date().toISOString(),
 }
+invSeedArray.push(OJ);
 
-invSeedArray.push(inv1);
+// const OJ = {
+//   name: 'Orange Juice',
+//   createdAt: new Date().toISOString(),
+//   updatedAt: new Date().toISOString(),
+// }
+
+// ingredientSeedArray.push(OJ);
+
+// const cocktail = {
+//   name: 'Screwdriver',
+//   imgUrl: 'https://en.wikipedia.org/wiki/Screwdriver_(cocktail)#/media/File:Screwdriver,_Birmingham-Shuttlesworth_International_Airport,_Birmingham_AL.jpg',
+//   createdAt: new Date().toISOString(),
+//   updatedAt: new Date().toISOString(),
+// }
+
+// cocktailSeedArray.push(cocktail);
 
 // const wR1 = {
-//   cocktailId: 1,
+//   cocktailId: 3,
 //   ingredientId: 1,
-//   ingredientAmount: 1,
+//   ingredientAmount: 2,
 //   createdAt: new Date().toISOString(),
 //   updatedAt: new Date().toISOString(),
 // }
 // const wR2 = {
-//   cocktailId: 1,
-//   ingredientId: 2,
-//   ingredientAmount: 1,
-//   createdAt: new Date().toISOString(),
-//   updatedAt: new Date().toISOString(),
-// }
-// const wR3 = {
-//   cocktailId: 1,
-//   ingredientId: 3,
-//   ingredientAmount: 1,
+//   cocktailId: 3,
+//   ingredientId: 4,
+//   ingredientAmount: 2,
 //   createdAt: new Date().toISOString(),
 //   updatedAt: new Date().toISOString(),
 // }
 
 // recipeSeedArray.push(wR1);
 // recipeSeedArray.push(wR2);
-// recipeSeedArray.push(wR3);
 
 
 

@@ -7,9 +7,10 @@ const flash = require('connect-flash');
 const passport = require('./config/ppConfig');
 const isLoggedIn = require('./middleware/isLoggedIn');
 const user = require('./models/user');
+const { Op } = require("sequelize");
 
 
-const { Ingredients, Inventory } = require('./models');
+const { User, Ingredients, Inventory, Cocktails, Recipes } = require('./models');
 
 const SECRET_SESSION = process.env.SECRET_SESSION;
 console.log(SECRET_SESSION);
@@ -47,12 +48,52 @@ app.get('/', isLoggedIn, async (req, res) => {
     const { id } = req.user.get(); 
 
     const parsedIngredients = await Ingredients.findAll({});
-    console.log(parsedIngredients);
+    //console.log(parsedIngredients);
+    const parsedRecipes = await Recipes.findAll({});
 
-    const parsedInventory = await Inventory.findAll({});
-    console.log(parsedInventory);
+    // Getting ingredients in user inventory
+    const parsedInventory = await Inventory.findAll({
+      where: {userId: id}
+    });
 
-    res.render('index', { ingredients: parsedIngredients, inventory: parsedInventory, id });
+    //ingredientIds has all the Ids of ingredients we have 
+    const ingredientIds = [];
+    parsedInventory.forEach(function(inv){
+      ingredientIds.push(inv.ingredientId)
+    })
+
+    const ingredientNames = await Ingredients.findAll({
+      where: {id: ingredientIds}
+    })
+    const filteredCocktailsIds = [];
+    parsedRecipes.forEach(function(recipe){
+      // returns true if recipe ingredient is NOT in inventory
+      if (!ingredientIds.includes(recipe.ingredientId)) {
+        filteredCocktailsIds.push(recipe.cocktailId)
+      }
+    })
+    
+    const parsedCocktails = await Cocktails.findAll({
+      where: {
+        id: {
+          [Op.not]: filteredCocktailsIds
+        }
+      }
+    });
+    
+
+
+
+    // console.log('FILTERED COCKTAILS', filteredCocktailsIds);
+    // console.log('PARSED INVENTORY', parsedInventory);
+    // console.log('ingredientNames', ingredientNames);
+
+    res.render('index', { 
+      ingredients: parsedIngredients, 
+      inventory: ingredientNames, 
+      cocktails: parsedCocktails,
+      id 
+    });
 
   } catch (err) {
     console.log(err);
@@ -81,6 +122,21 @@ app.use('/auth', require('./controllers/auth'))
 app.get('/profile', isLoggedIn, (req, res) => {
   const { id, name, email } = req.user.get(); 
   res.render('profile', { id, name, email });
+});
+
+// trying to add ingredients to user inventory 
+app.post('/addingredient', async function(req, res) {
+
+  const { id } = req.user.get(); 
+  //console.log('LOL LOOK HERE', req.body);
+  //These both work fantastically for grabbing the form's input data 
+  //console.log('Doggo?', req.body.ingredient);
+  let ingredientId = req.body.ingredient
+
+  const addIngredient = await Inventory.create({ id, ingredientId });
+  console.log(addIngredient.toJSON());
+
+  res.redirect('/');
 });
 
 const PORT = process.env.PORT || 3000;
