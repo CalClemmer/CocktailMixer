@@ -138,13 +138,8 @@ app.post('/addingredient', async function(req, res) {
   //console.log('LOL LOOK HERE', req.body);
   //These both work fantastically for grabbing the form's input data 
   //console.log('Doggo?', req.body.ingredient);
-  let ingredientName = req.body.ingredient
+  let ingredientId = req.body.ingredient
 
-  let ingredient = await Ingredients.findOne({
-        where: {name: ingredientName}
-    });
-
-  let ingredientId = ingredient.id
   console.log('INGREDIENT INGREDIENT ID ID ID ', ingredientId)
 
   const addIngredient = await Inventory.create({ userId: id, ingredientId });

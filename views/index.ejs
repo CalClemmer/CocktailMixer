@@ -10,10 +10,10 @@
 
 <ul id="myUL">
     <% ingredients.forEach(function(ingredient) { %>
-    <li><a id='ingredient<%= ingredient.id%>' href="#"> <%= ingredient.name %> </a>
+    <li><a id='ingredient<%= ingredient.id%>' href="#"> <%= ingredient.name %></a>
 
         <form method="POST" action="/addingredient">
-            <input id="addingredient" type="submit" value="<%= ingredient.name %>" name="ingredient">
+            <button id="addingredient" type="submit" value="<%= ingredient.id %>" name="ingredient">Add to Inventory</button>
         </form>
     
     </li>
