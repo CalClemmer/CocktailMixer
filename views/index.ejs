@@ -1,6 +1,6 @@
 <style>
 #ingredient2 {
-    color: red;
+
 }
 </style>
 
@@ -24,7 +24,13 @@ My Ingredients
 
 <ul>
     <% inventory.forEach(function(inventory) { %>
-    <li><a href="#"> <%= inventory.name %> </a></li>
+    <li><a href="#"> <%= inventory.name %> </a>
+    
+        <form method="POST" action="/deleteingredient">
+            <button id="deleteingredient" type="submit" value="<%= inventory.id %>" name="ingredient">X</button>
+        </form>
+    
+    </li>
     <% }); %>
 </ul>
 
@@ -36,7 +42,10 @@ Cocktails You Can Make!
     <% }); %>
 </ul>
 
-<form method="POST" action="/addingredient">
+Cocktail Info
+<img class = "cocktailImage" src = "<%= cocktailUrl %>" alt = "A picture of a delicious cocktail">
+
+<!-- <form method="POST" action="/addingredient">
 
   <label for="addingredient">Add Ingredient Id</label>
   <input id="addingredient" type="text" name="ingredient">
@@ -50,7 +59,7 @@ Cocktails You Can Make!
     <input id="deleteingredient" type="text" name="ingredient">
   
     <input type="submit">
-</form>
+</form> -->
 
 
 <script>
@@ -74,35 +83,5 @@ function searchBar() {
     }
   }
 }
-
-async function loadInventory(){
-    try {
-        //const allIngredients = await Ingredients.findAll({});
-
-        const parsedIngredients = await Ingredients.findAll({
-            
-        });
-        console.log(parsedIngredients);
-
-        res.render('index', { ingredients: parsedIngredients });
-
-    } catch (err) {
-        console.log(err);
-    }
-}
-
-/*
-async function addIngredient(ingredientId) {
-
-    try {
-        console.log('Hum')
-        const inventory = await Inventory.create({userId: 1, ingredientId: 1})
-    } catch (error) {
-        console.log(error);
-    }
-}
-
-addIngredient();
-*/
 
 </script>
