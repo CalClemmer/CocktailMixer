@@ -49,7 +49,7 @@ app.get('/', isLoggedIn, async (req, res) => {
     //console.log(parsedIngredients);
     const parsedRecipes = await Recipes.findAll({});
     
-    // Getting ingredients in user inventory
+    // Getting ingredients in user inventory, only pass through ingredients logged in user has 
     const parsedInventory = await Inventory.findAll({
       where: {userId: id}
     });
@@ -96,6 +96,7 @@ app.get('/', isLoggedIn, async (req, res) => {
     // console.log('ingredientNames', ingredientNames);
 
     res.render('index', { 
+      recipes: parsedRecipes,
       ingredients: parsedIngredients, 
       inventory: ingredientNames, 
       cocktails: parsedCocktails,
@@ -140,10 +141,10 @@ app.post('/addingredient', async function(req, res) {
   //console.log('Doggo?', req.body.ingredient);
   let ingredientId = req.body.ingredient
 
-  console.log('INGREDIENT INGREDIENT ID ID ID ', ingredientId)
+  // console.log('INGREDIENT INGREDIENT ID ID ID ', ingredientId)
 
   const addIngredient = await Inventory.create({ userId: id, ingredientId });
-  console.log(addIngredient.toJSON());
+  // console.log(addIngredient.toJSON());
 
   res.redirect('/');
 });

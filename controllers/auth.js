@@ -18,11 +18,6 @@ const { User, Inventory, Ingredients } = require('../models');
     res.redirect('/');
   });
 
-// trying to add ingredients to user inventory 
-  router.post('/addingredient', function(req, res) {
-    console.log('Taco taco');
-    res.redirect('/');
-  });
 
   router.post('/login', passport.authenticate('local', {
     successRedirect: '/',

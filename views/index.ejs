@@ -2,6 +2,9 @@
 #ingredient2 {
 
 }
+.hide {
+    display: none;
+}
 </style>
 
 <h2>Homepage</h2>
@@ -13,7 +16,7 @@
     <li><a id='ingredient<%= ingredient.id%>' href="#"> <%= ingredient.name %></a>
 
         <form method="POST" action="/addingredient">
-            <button id="addingredient" type="submit" value="<%= ingredient.id %>" name="ingredient">Add to Inventory</button>
+            <button class="addIngredient" type="submit" value="<%= ingredient.id %>" name="ingredient">Add to Inventory</button>
         </form>
     
     </li>
@@ -24,10 +27,11 @@ My Ingredients
 
 <ul>
     <% inventory.forEach(function(inventory) { %>
-    <li><a href="#"> <%= inventory.name %> </a>
+    <li>
+        <a href="#"> <%= inventory.name %> </a>
     
         <form method="POST" action="/deleteingredient">
-            <button id="deleteingredient" type="submit" value="<%= inventory.id %>" name="ingredient">X</button>
+            <button class="deleteIngredient" type="submit" value="<%= inventory.id %>" name="ingredient">X</button>
         </form>
     
     </li>
@@ -38,12 +42,25 @@ Cocktails You Can Make!
 
 <ul>
     <% cocktails.forEach(function(cocktail) { %>
-    <li><a href="#"> <%= cocktail.name %> </a></li>
+    <li>
+        <!-- <a href="#"> <%= cocktail.name %> </a> -->
+
+        <button class="lookupCocktail" onClick="displayCocktail('<%=cocktail.imgUrl%>','<%=cocktail.id%>')">
+            <%= cocktail.name%>
+        </button>
+    
+    </li>
     <% }); %>
 </ul>
 
-Cocktail Info
-<img class = "cocktailImage" src = "<%= cocktailUrl %>" alt = "A picture of a delicious cocktail">
+<h2>Cocktail Info</h2>
+<img id = "tail" class = "cocktailImage hide" src = "#" width = 200>
+<div id = "recipe" class = "hide">
+    <h3>Recipe:</h3> 
+    <div id = "recipeList">
+        Mix Mix Mix
+    </div>
+</div>
 
 <!-- <form method="POST" action="/addingredient">
 
@@ -83,5 +100,15 @@ function searchBar() {
     }
   }
 }
+
+function displayCocktail(cocktailImg, cocktailId, recipeList) {
+    document.getElementById('tail').src = cocktailImg;
+    document.getElementById('tail').classList.remove('hide');
+    document.getElementById('recipe').classList.remove('hide');
+    let currrentCocktail = cocktailId;
+    console.log(cocktailId);
+}
+
+
 
 </script>
