@@ -7,3 +7,97 @@ nav ul li {
 h1 {
   color: chartreuse;
 }
+
+body {
+  margin: 0;
+}
+
+.wrapper{
+  min-height: 100vh;
+  background: #ccc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  height: 100px;
+}
+
+.content {
+  display: flex;
+  flex: 1;
+  background: #999;
+  color: #000; 
+
+}
+
+.ingredients {
+width: 30vw;
+background: #ccc;
+order: 1;
+}
+.cocktails {
+  width: 30vw;
+  background: #ccc;
+  order: 2;
+}
+.recipes {
+  width: 30vw;
+  background: #ccc;
+  order: 3;
+}
+
+.columns {
+  display: flex;
+  flex:1;
+  padding: 1em;
+}
+
+.addIngredient {
+  font-size: 15px;
+  padding: 3px;
+}
+
+.deleteIngredient {
+  font-size: 14px;
+  padding: 1px 5px;
+}
+
+p {
+  display: inline-block;
+  margin: 1px;
+}
+#myUL {
+  line-height: 75%;
+  height: 311px; 
+  overflow-y: auto;
+}
+#myIng {
+  line-height: 75%;
+  overflow-y: auto;
+  height: 180px;
+}
+#myTails {
+  height: 80vh;
+  overflow-y: auto;
+}
+
+
+
+h3 {
+  text-align:center;
+}
+
+.center {
+  display: block;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
+.hide {
+  display: none;
+}

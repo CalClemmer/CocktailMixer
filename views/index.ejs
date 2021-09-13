@@ -2,66 +2,74 @@
 #ingredient2 {
 
 }
-.hide {
-    display: none;
-}
+
 </style>
+<div class='columns'>
+    <div class="ingredients">
+        <h3> Ingredients </h3>
+        <input autofocus class = "center" type="text" id="myInput" onkeyup="searchBar()" placeholder="Search for ingredients..">
+        <br>
 
-<h2>Homepage</h2>
-<h3> Ingredients </h3>
-<input type="text" id="myInput" onkeyup="searchBar()" placeholder="Search for names..">
+        <ul id="myUL">
+            <% ingredients.forEach(function(ingredient) { %>
+                <li>    
+                    <form method="POST" action="/addingredient">
+                    <p id='ingredient<%= ingredient.id%>' href="#"> <%= ingredient.name %>
+                        <button class="addIngredient" type="submit" value="<%= ingredient.id %>" name="ingredient">Add</button>
+                    </p>
+                    </form>
+                </li>
 
-<ul id="myUL">
-    <% ingredients.forEach(function(ingredient) { %>
-    <li><a id='ingredient<%= ingredient.id%>' href="#"> <%= ingredient.name %></a>
+            <% }); %>
+        </ul>
+        <h3>My Ingredients</h3>
 
-        <form method="POST" action="/addingredient">
-            <button class="addIngredient" type="submit" value="<%= ingredient.id %>" name="ingredient">Add to Inventory</button>
-        </form>
-    
-    </li>
-    <% }); %>
-</ul>
-My Ingredients
+            <form method="POST" action="/deleteallingredients">
+                <p class = "center" href="#"> 
+                    <button class="deleteIngredient" type="submit" value="1" name="ingredient">Clear All</button>
+                </p>
+            </form>
 
+        <ul id="myIng">
+            <% inventory.forEach(function(inventory) { %>
+            <li>
+                <form method="POST" action="/deleteingredient">
+                <p href="#"> <%= inventory.name %> 
+                    <button class="deleteIngredient" type="submit" value="<%= inventory.id %>" name="ingredient">X</button>
+                </p>
+                </form>
+            </li>
+            <% }); %>
+        </ul>
+    </div>
 
-<ul>
-    <% inventory.forEach(function(inventory) { %>
-    <li>
-        <a href="#"> <%= inventory.name %> </a>
-    
-        <form method="POST" action="/deleteingredient">
-            <button class="deleteIngredient" type="submit" value="<%= inventory.id %>" name="ingredient">X</button>
-        </form>
-    
-    </li>
-    <% }); %>
-</ul>
+    <div class="cocktails">
+        <h3>Cocktails You Can Make!</h3>
 
-Cocktails You Can Make!
-
-<ul>
-    <% cocktails.forEach(function(cocktail) { %>
-    <li>
-        <!-- <a href="#"> <%= cocktail.name %> </a> -->
-
-        <button class="lookupCocktail" onClick="displayCocktail('<%=cocktail.imgUrl%>','<%=cocktail.id%>','<%=cocktail.blurb%>')">
-            <%= cocktail.name%>
-        </button>
-    
-    </li>
-    <% }); %>
-</ul>
-
-<h2>Cocktail Info</h2>
-<img id = "tail" class = "cocktailImage hide" src = "#" width = 200>
-<div id = "recipe" class = "hide">
-    <h3>Recipe:</h3> 
-    <div id = "instructions">
-        Mix Mix Mix
+        <ul id="myTails">
+            <% cocktails.forEach(function(cocktail) { %>
+            <li>
+                <!-- <a href="#"> <%= cocktail.name %> </a> -->
+                <p>
+                <button class="lookupCocktail" onClick="displayCocktail('<%=cocktail.imgUrl%>','<%=cocktail.id%>','<%=cocktail.blurb%>')">
+                    <%= cocktail.name%>
+                </button>
+                </p>
+            </li>
+            <% }); %>
+        </ul>
+    </div>
+    <div class="recipes">
+        <h2 class="center">Cocktail Info</h2>
+        <img id = "tail" class = "cocktailImage hide center" src = "#" width = 200>
+        <div id = "recipe" class = "hide">
+            <h3>Recipe:</h3> 
+            <div id = "instructions">
+                Mix Mix Mix
+            </div>
+        </div>
     </div>
 </div>
-
 <!-- <form method="POST" action="/addingredient">
  
   <label for="addingredient">Add Ingredient Id</label>
@@ -91,9 +99,9 @@ function searchBar() {
 
   // Loop through all list items, and hide those who don't match the search query
   for (i = 0; i < li.length; i++) {
-    a = li[i].getElementsByTagName("a")[0];
+    a = li[i].getElementsByTagName("p")[0];
     txtValue = a.textContent || a.innerText;
-    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+    if (txtValue.toUpperCase().indexOf(filter) > -1 && txtValue !== "") {
       li[i].style.display = "";
     } else {
       li[i].style.display = "none";

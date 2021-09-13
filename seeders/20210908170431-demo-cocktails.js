@@ -426,13 +426,6 @@ const simpleSyrup = {
 }
 ingredientSeedArray.push(simpleSyrup);
 
-const carbonatedWater = {
-  name: 'Carbonated Water',
-  createdAt: new Date().toISOString(),
-  updatedAt: new Date().toISOString(),
-}
-ingredientSeedArray.push(carbonatedWater);
-
 const greenChartreuse = {
   name: 'Green Chartreuse',
   createdAt: new Date().toISOString(),
@@ -767,6 +760,336 @@ const daq3 = {
 recipeSeedArray.push(daq1);
 recipeSeedArray.push(daq2);
 recipeSeedArray.push(daq3);
+
+const mart1 = {
+  cocktailId: 13,
+  ingredientId: 11,
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+const mart2 = {
+  cocktailId: 13,
+  ingredientId: 22,
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+recipeSeedArray.push(mart1);
+recipeSeedArray.push(mart2);
+
+const gf1 = {
+  cocktailId: 14,
+  ingredientId: 11,
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+const gf2 = {
+  cocktailId: 14,
+  ingredientId: 14,
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+const gf3 = {
+  cocktailId: 14,
+  ingredientId: 26,
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+const gf4 = {
+  cocktailId: 14,
+  ingredientId: 10,
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+recipeSeedArray.push(gf1);
+recipeSeedArray.push(gf2);
+recipeSeedArray.push(gf3);
+recipeSeedArray.push(gf4);
+
+const jc1 = {
+  cocktailId: 15,
+  ingredientId: 11,
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+const jc2 = {
+  cocktailId: 15,
+  ingredientId: 14,
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+const jc3 = {
+  cocktailId: 15,
+  ingredientId: 26,
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+const jc4 = {
+  cocktailId: 15,
+  ingredientId: 10,
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+recipeSeedArray.push(jc1);
+recipeSeedArray.push(jc2);
+recipeSeedArray.push(jc3);
+recipeSeedArray.push(jc4);
+
+const lw1 = {
+  cocktailId: 16,
+  ingredientId: 11,
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+const lw2 = {
+  cocktailId: 16,
+  ingredientId: 24,
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+const lw3 = {
+  cocktailId: 16,
+  ingredientId: 27,
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+const lw4 = {
+  cocktailId: 16,
+  ingredientId: 15,
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+recipeSeedArray.push(lw1);
+recipeSeedArray.push(lw2);
+recipeSeedArray.push(lw3);
+recipeSeedArray.push(lw4);
+
+const manh1 = {
+  cocktailId: 17,
+  ingredientId: 28,
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+const manh2 = {
+  cocktailId: 17,
+  ingredientId: 9,
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+const manh3 = {
+  cocktailId: 17,
+  ingredientId: 29,
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+recipeSeedArray.push(manh1);
+recipeSeedArray.push(manh2);
+recipeSeedArray.push(manh3);
+
+const martinez1 = {
+  cocktailId: 18,
+  ingredientId: 11,
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+const martinez2 = {
+  cocktailId: 18,
+  ingredientId: 9,
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+const martinez3 = {
+  cocktailId: 18,
+  ingredientId: 15,
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+const martinez4 = {
+  cocktailId: 18,
+  ingredientId: 20,
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+recipeSeedArray.push(martinez1);
+recipeSeedArray.push(martinez2);
+recipeSeedArray.push(martinez3);
+recipeSeedArray.push(martinez4);
+
+const neg1 = {
+  cocktailId: 19,
+  ingredientId: 11,
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+const neg2 = {
+  cocktailId: 19,
+  ingredientId: 9,
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+const neg3 = {
+  cocktailId: 19,
+  ingredientId: 8,
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+recipeSeedArray.push(neg1);
+recipeSeedArray.push(neg2);
+recipeSeedArray.push(neg3);
+
+const of1 = {
+  cocktailId: 20,
+  ingredientId: 19,
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+const of2 = {
+  cocktailId: 20,
+  ingredientId: 29,
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+const of3 = {
+  cocktailId: 20,
+  ingredientId: 25,
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+recipeSeedArray.push(of1);
+recipeSeedArray.push(of2);
+recipeSeedArray.push(of3);
+
+const para1 = {
+  cocktailId: 21,
+  ingredientId: 11,
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+const para2 = {
+  cocktailId: 21,
+  ingredientId: 12,
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+const para3 = {
+  cocktailId: 21,
+  ingredientId: 4,
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+recipeSeedArray.push(para1);
+recipeSeedArray.push(para2);
+recipeSeedArray.push(para3);
+
+const pla1 = {
+  cocktailId: 22,
+  ingredientId: 17,
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+const pla2 = {
+  cocktailId: 22,
+  ingredientId: 24,
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+const pla3 = {
+  cocktailId: 22,
+  ingredientId: 26,
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+recipeSeedArray.push(pla1);
+recipeSeedArray.push(pla2);
+recipeSeedArray.push(pla3);
+
+const saz1 = {
+  cocktailId: 23,
+  ingredientId: 5,
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+const saz2 = {
+  cocktailId: 23,
+  ingredientId: 31,
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+const saz3 = {
+  cocktailId: 23,
+  ingredientId: 25,
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+const saz4 = {
+  cocktailId: 23,
+  ingredientId: 30,
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+recipeSeedArray.push(saz1);
+recipeSeedArray.push(saz2);
+recipeSeedArray.push(saz3);
+recipeSeedArray.push(saz4);
+
+const sc1 = {
+  cocktailId: 24,
+  ingredientId: 5,
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+const sc2 = {
+  cocktailId: 24,
+  ingredientId: 18,
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+const sc3 = {
+  cocktailId: 24,
+  ingredientId: 14,
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+
+recipeSeedArray.push(sc1);
+recipeSeedArray.push(sc2);
+recipeSeedArray.push(sc3);
+
+const stin1 = {
+  cocktailId: 25,
+  ingredientId: 5,
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+const stin2 = {
+  cocktailId: 25,
+  ingredientId: 32,
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+recipeSeedArray.push(stin1);
+recipeSeedArray.push(stin2);
+
+const ws1 = {
+  cocktailId: 26,
+  ingredientId: 19,
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+const ws2 = {
+  cocktailId: 26,
+  ingredientId: 14,
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+const ws3 = {
+  cocktailId: 26,
+  ingredientId: 26,
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+recipeSeedArray.push(ws1);
+recipeSeedArray.push(ws2);
+recipeSeedArray.push(ws3);
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {

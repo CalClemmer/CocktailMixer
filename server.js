@@ -87,13 +87,6 @@ app.get('/', isLoggedIn, async (req, res) => {
             }
           }
         });
-    
-    
-    
-    
-    // console.log('FILTERED COCKTAILS', filteredCocktailsIds);
-    // console.log('PARSED INVENTORY', parsedInventory);
-    // console.log('ingredientNames', ingredientNames);
 
     res.render('index', { 
       recipes: parsedRecipes,
@@ -161,6 +154,21 @@ app.post('/deleteingredient', async function(req, res) {
     where: {
       userId: id, 
       ingredientId 
+    }
+  });
+
+  res.redirect('/');
+});
+
+app.post('/deleteallingredients', async function(req, res) {
+
+  const { id } = req.user.get(); 
+  //console.log('LOL LOOK HERE', req.body);
+  //These both work fantastically for grabbing the form's input data 
+  //console.log('Doggo?', req.body.ingredient);
+  const delIngredient = await Inventory.destroy({ 
+    where: {
+      userId: id, 
     }
   });
 
