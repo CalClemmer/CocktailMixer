@@ -101,22 +101,6 @@ app.get('/', isLoggedIn, async (req, res) => {
   }
 })
 
-/*
-      app.get('/users', async (req, res) => {
-        try {
-            const allUsers = await User.findAll({});
-            
-            const parsedUsers = allUsers.map(u => u.toJSON())
-            console.log(parsedUsers);
-
-            //resizeBy.render('users/index', {users: parsedUsers});
-            res.render('users/index', { users: parsedUsers });
-            
-        } catch (err) {
-            console.log(err);
-        }
-      })
-*/
 
 app.use('/auth', require('./controllers/auth'))
 
