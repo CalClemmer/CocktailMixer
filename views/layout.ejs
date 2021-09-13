@@ -16,13 +16,15 @@
           <div class='header'>
 
           <h2>Cocktail Mixer</h2>
-              <% if (!currentUser) {%>
-                <li><a href="/auth/signup">Signup</a></li>
-                <li><a href="/auth/login">Login</a></li>
-            <% } else { %>
-                <li><a href="/auth/logout">Logout</a></li>
-                <li><a href="/profile">Profile</a></li>
-            <% } %>
+            <div class="nav">
+                <% if (!currentUser) {%>
+                  <li><a href="/auth/signup">Signup</a></li>
+                  <li><a href="/auth/login">Login</a></li>
+              <% } else { %>
+                  <li><a class = "navitem" href="/auth/logout">Logout</a></li>
+                  <li><a class = "navitem" href="/profile">Profile</a></li>
+              <% } %>
+            </div>
           </div>
           <div class="content">
             <%- body %>

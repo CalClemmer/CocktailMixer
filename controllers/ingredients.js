@@ -1,9 +1,17 @@
 const express = require('express');
+const layouts = require('express-ejs-layouts');
 var router = express.Router();
+const session = require('express-session');
+const flash = require('connect-flash');
 const passport = require('../config/ppConfig');
+const isLoggedIn = require('../middleware/isLoggedIn');
+const user = require('../models/user');
+const { Op } = require("sequelize");
 
-const { User, Ingredients, Inventory, Cocktails, Recipes } = require('./models');
 
+
+
+const { User, Ingredients, Inventory, Cocktails, Recipes } = require('../models');
 
 // trying to add ingredients to user inventory 
 router.post('/addingredient', async function(req, res) {
@@ -40,7 +48,7 @@ router.post('/addingredient', async function(req, res) {
     res.redirect('/');
   });
   
-  router.post('/deleteallingredients', async function(req, res) {
+ router.post('/deleteallingredients', async function(req, res) {
   
     const { id } = req.user.get(); 
     //console.log('LOL LOOK HERE', req.body);
@@ -55,3 +63,5 @@ router.post('/addingredient', async function(req, res) {
     res.redirect('/');
   });
   
+
+module.exports = router;

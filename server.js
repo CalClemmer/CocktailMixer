@@ -103,61 +103,14 @@ app.get('/', isLoggedIn, async (req, res) => {
 
 
 app.use('/auth', require('./controllers/auth'))
+app.use('/ingredients', require('./controllers/ingredients'))
 
 app.get('/profile', isLoggedIn, (req, res) => {
   const { id, name, email } = req.user.get(); 
   res.render('profile', { id, name, email });
 });
 
-// trying to add ingredients to user inventory 
-app.post('/addingredient', async function(req, res) {
-
-  const { id } = req.user.get(); 
-  //console.log('LOL LOOK HERE', req.body);
-  //These both work fantastically for grabbing the form's input data 
-  //console.log('Doggo?', req.body.ingredient);
-  let ingredientId = req.body.ingredient
-
-  // console.log('INGREDIENT INGREDIENT ID ID ID ', ingredientId)
-
-  const addIngredient = await Inventory.create({ userId: id, ingredientId });
-  // console.log(addIngredient.toJSON());
-
-  res.redirect('/');
-});
-
-app.post('/deleteingredient', async function(req, res) {
-
-  const { id } = req.user.get(); 
-  //console.log('LOL LOOK HERE', req.body);
-  //These both work fantastically for grabbing the form's input data 
-  //console.log('Doggo?', req.body.ingredient);
-  let ingredientId = req.body.ingredient
-
-  const delIngredient = await Inventory.destroy({ 
-    where: {
-      userId: id, 
-      ingredientId 
-    }
-  });
-
-  res.redirect('/');
-});
-
-app.post('/deleteallingredients', async function(req, res) {
-
-  const { id } = req.user.get(); 
-  //console.log('LOL LOOK HERE', req.body);
-  //These both work fantastically for grabbing the form's input data 
-  //console.log('Doggo?', req.body.ingredient);
-  const delIngredient = await Inventory.destroy({ 
-    where: {
-      userId: id, 
-    }
-  });
-
-  res.redirect('/');
-});
+app.get('/*', (req, res) => res.render('404'))
 
 const PORT = process.env.PORT || 3000;
 const server = app.listen(PORT, () => {

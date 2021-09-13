@@ -79,7 +79,7 @@ p {
   height: 180px;
 }
 #myTails {
-  height: 80vh;
+  height: 75vh;
   overflow-y: auto;
 }
 
@@ -96,8 +96,28 @@ h3 {
   margin-right: auto;
 }
 
-
+.profile {
+  display: flex;
+  flex-direction: column;
+}
 
 .hide {
   display: none;
+}
+
+.fourofour {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+}
+
+.navitem {
+  margin: 10px;
+  text-align: right;
 }

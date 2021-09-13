@@ -180,7 +180,7 @@ cocktailSeedArray.push(negroni);
 
 const oldFashioned= {
   name: 'Old Fashioned',
-  imgUrl: 'https://en.wikipedia.org/wiki/File:Whiskey_Old_Fashioned1.jpg',
+  imgUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Whiskey_Old_Fashioned1.jpg/220px-Whiskey_Old_Fashioned1.jpg',
   blurb: 'Place sugar cube in old fashioned glass and saturate with Angostura Bitters, add a few dashes of plain water. Muddle until dissolved. Fill the glass with ice cubes and add 1.5oz Bourbon. Garnish with orange slice or zest, and a cocktail cherry.',
   createdAt: new Date().toISOString(),
   updatedAt: new Date().toISOString(),

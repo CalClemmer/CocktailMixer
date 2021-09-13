@@ -13,7 +13,7 @@
         <ul id="myUL">
             <% ingredients.forEach(function(ingredient) { %>
                 <li>    
-                    <form method="POST" action="/addingredient">
+                    <form method="POST" action="/ingredients/addingredient">
                     <p id='ingredient<%= ingredient.id%>' href="#"> <%= ingredient.name %>
                         <button class="addIngredient" type="submit" value="<%= ingredient.id %>" name="ingredient">Add</button>
                     </p>
@@ -24,7 +24,7 @@
         </ul>
         <h3>My Ingredients</h3>
 
-            <form method="POST" action="/deleteallingredients">
+            <form method="POST" action="/ingredients/deleteallingredients">
                 <p class = "center" href="#"> 
                     <button class="deleteIngredient" type="submit" value="1" name="ingredient">Clear All</button>
                 </p>
@@ -33,7 +33,7 @@
         <ul id="myIng">
             <% inventory.forEach(function(inventory) { %>
             <li>
-                <form method="POST" action="/deleteingredient">
+                <form method="POST" action="/ingredients/deleteingredient">
                 <p href="#"> <%= inventory.name %> 
                     <button class="deleteIngredient" type="submit" value="<%= inventory.id %>" name="ingredient">X</button>
                 </p>
