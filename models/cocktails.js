@@ -17,7 +17,8 @@ module.exports = (sequelize, DataTypes) => {
   };
   Cocktails.init({
     name: DataTypes.STRING,
-    imgUrl: DataTypes.STRING
+    imgUrl: DataTypes.STRING,
+    blurb: DataTypes.STRING(1000)
   }, {
     sequelize,
     modelName: 'Cocktails',

@@ -45,7 +45,7 @@ Cocktails You Can Make!
     <li>
         <!-- <a href="#"> <%= cocktail.name %> </a> -->
 
-        <button class="lookupCocktail" onClick="displayCocktail('<%=cocktail.imgUrl%>','<%=cocktail.id%>')">
+        <button class="lookupCocktail" onClick="displayCocktail('<%=cocktail.imgUrl%>','<%=cocktail.id%>','<%=cocktail.blurb%>')">
             <%= cocktail.name%>
         </button>
     
@@ -57,13 +57,13 @@ Cocktails You Can Make!
 <img id = "tail" class = "cocktailImage hide" src = "#" width = 200>
 <div id = "recipe" class = "hide">
     <h3>Recipe:</h3> 
-    <div id = "recipeList">
+    <div id = "instructions">
         Mix Mix Mix
     </div>
 </div>
 
 <!-- <form method="POST" action="/addingredient">
-
+ 
   <label for="addingredient">Add Ingredient Id</label>
   <input id="addingredient" type="text" name="ingredient">
 
@@ -101,12 +101,13 @@ function searchBar() {
   }
 }
 
-function displayCocktail(cocktailImg, cocktailId, recipeList) {
+function displayCocktail(cocktailImg, cocktailId, blurb) {
     document.getElementById('tail').src = cocktailImg;
     document.getElementById('tail').classList.remove('hide');
     document.getElementById('recipe').classList.remove('hide');
-    let currrentCocktail = cocktailId;
+    document.getElementById('instructions').innerText = blurb;
     console.log(cocktailId);
+    console.log(blurb);
 }
 
 
