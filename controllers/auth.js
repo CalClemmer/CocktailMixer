@@ -22,7 +22,7 @@ const { User, Inventory, Ingredients } = require('../models');
   router.post('/login', passport.authenticate('local', {
     successRedirect: '/',
     failureRedirect: '/auth/login',
-    successFlash: 'Welcome back ...',
+    successFlash: '', //'Welcome back ...',
     failureFlash: 'Either email or password is incorrect' 
   }));
 
@@ -40,7 +40,7 @@ const { User, Inventory, Ingredients } = require('../models');
           console.log(`----- ${user.name} was created -----`);
           const successObject = {
               successRedirect: '/',
-              successFlash: `Welcome ${user.name}. Account was created and logging in...`
+              successFlash: '',//`Welcome ${user.name}. Account was created and logging in...`
           }
           // 
           passport.authenticate('local', successObject)(req, res);
