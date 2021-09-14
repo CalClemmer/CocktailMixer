@@ -49,3 +49,31 @@ https://imgur.com/a/Hd68VZ6
 4. run "sequelize db:seed:all" 
 5. run "npm run start" 
 6. Go to localhost:3000 to view page 
+
+Here's some code I'm proud of: 
+
+```javascript
+const filteredCocktailsIds = [];
+  parsedRecipes.forEach(function(recipe){
+  // returns true if recipe ingredient is NOT in inventory
+    if (!ingredientIds.includes(recipe.ingredientId)) {
+      filteredCocktailsIds.push(recipe.cocktailId)
+    }
+})
+```
+
+This code took a long time to figure out 
+```javascript
+  router.post('/deleteingredient', async function(req, res) {
+  
+    const { id } = req.user.get(); 
+
+    let ingredientId = req.body.ingredient
+  
+    const delIngredient = await Inventory.destroy({ 
+      where: {
+        userId: id, 
+        ingredientId 
+      }
+    });
+```
