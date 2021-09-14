@@ -21,7 +21,7 @@ body {
 }
 
 .header {
-  height: 100px;
+  min-height: 65px;
 }
 
 .content {
@@ -50,7 +50,6 @@ order: 1;
 
 .columns {
   display: flex;
-  flex:1;
   padding: 1em;
 }
 
@@ -70,20 +69,18 @@ p {
 }
 #myUL {
   line-height: 75%;
-  height: 311px; 
+  height: 40vh; 
   overflow-y: auto;
 }
 #myIng {
   line-height: 75%;
   overflow-y: auto;
-  height: 180px;
+  height: 20vh;
 }
 #myTails {
   height: 75vh;
   overflow-y: auto;
 }
-
-
 
 h3 {
   text-align:center;
@@ -114,10 +111,9 @@ h3 {
 .nav {
   display: flex;
   flex-direction: row;
-  text-align: center;
 }
 
 .navitem {
-  margin: 10px;
-  text-align: right;
+  margin: 0px 20px;
+  text-align: left;
 }

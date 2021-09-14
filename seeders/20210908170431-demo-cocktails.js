@@ -153,7 +153,7 @@ cocktailSeedArray.push(lastWord);
 
 const manhattan= {
   name: 'Manhattan',
-  imgUrl: 'https://en.wikipedia.org/wiki/Manhattan_(cocktail)',
+  imgUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Manhattan_Cocktail2.jpg/220px-Manhattan_Cocktail2.jpg',
   blurb: 'Stir 1.66oz of Rye Whiskey, 0.67oz of Red Vermouth, and a dash of Angostura bitters over ice, strained into a chilled glass, garnished with a Maraschino cherry, and served up',
   createdAt: new Date().toISOString(),
   updatedAt: new Date().toISOString(),
@@ -240,6 +240,196 @@ const whiskeySour = {
   updatedAt: new Date().toISOString(),
 }
 cocktailSeedArray.push(whiskeySour);
+
+const longIslandIcedTea = {
+  name: 'Long Island Iced Tea',
+  imgUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Long_Island_Iced_Teas.jpg/220px-Long_Island_Iced_Teas.jpg',
+  blurb: 'Add 0.5oz Tequila, 0.5oz Vodka, 0.5oz White Rum, 0.5oz Triple Sec, 0.5oz Gin, 0.8oz Lemon Juice, 1oz Simple Syrup, and a splash of Cola into highball glass filled with ice. Stir gently. Optionally garnish with lemon slice.',
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+cocktailSeedArray.push(longIslandIcedTea);
+
+const margarita = {
+  name: 'Margarita',
+  imgUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/MargaritaReal.jpg/220px-MargaritaReal.jpg',
+  blurb: 'Pour 1.75oz Tequila, 0.75oz Triple Sec, and 0.5oz Lime Juice into shaker with ice. Shake well and strain into cocktail glass rimmed with salt.',
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+cocktailSeedArray.push(margarita);
+
+const mimosa= {
+  name: 'Mimosa',
+  imgUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Pool-side_Mimosas_at_The_Standard_Hotel.jpg/220px-Pool-side_Mimosas_at_The_Standard_Hotel.jpg',
+  blurb: 'Mix equal parts chilled Champagne and Orange Juice into the glass. Serve cold.',
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+cocktailSeedArray.push(mimosa);
+
+const mojito= {
+  name: 'Mojito',
+  imgUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Mojito98775.jpeg/220px-Mojito98775.jpeg',
+  blurb: 'Muddle 6 sprigs of mint leaves with 0.75 oz Simple Syrup and 1oz Lime Juice. Add a splash of Soda Water and fill the glass with cracked ice. Pour in 1.25oz rum and top with soda water. Garnish with sprig of mint leaves and lemon slice. Serve in a Collins glass with straw.',
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+cocktailSeedArray.push(mojito);
+
+const moscowMule= {
+  name: 'Moscow Mule',
+  imgUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Moscow_Mule_at_Rye%2C_San_Francisco.jpg/220px-Moscow_Mule_at_Rye%2C_San_Francisco.jpg',
+  blurb: 'Combine 1.5oz Vodka and 8oz Ginger Beer in a highball glass filled with ice. Add a large splash of lime juice. Stir gently. Garnish.',
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+cocktailSeedArray.push(moscowMule);
+
+const pinaColada= {
+  name: 'Pina Colada',
+  imgUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Pi%C3%B1a_Colada.jpg/220px-Pi%C3%B1a_Colada.jpg',
+  blurb: 'Blend 1.5oz White Rum, 1oz Coconut Cream, and 1.5oz Pineapple Juice with ice in an electric blender, pour into a large goblet or Hurricane glass and serve.',
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+cocktailSeedArray.push(pinaColada);
+
+const cosmopolitan= {
+  name: 'Cosmopolitan',
+  imgUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Cosmopolitan_%285076906532%29.jpg/220px-Cosmopolitan_%285076906532%29.jpg',
+  blurb: 'Shake 1.25oz Vodka, 0.5oz Triple Sec, 0.5oz Lime Juice, and 1oz Cranberry Juice in cocktail shaker filled with ice. Strain into a large cocktail glass. Garnish with lime slice.',
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+cocktailSeedArray.push(cosmopolitan);
+
+const sexOnTheBeach= {
+  name: 'Sex on the Beach',
+  imgUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Sex_On_The_Beach.jpg/180px-Sex_On_The_Beach.jpg',
+  blurb: 'Build 1.5oz Vodka, 0.75oz Peach Schnapps, 1.5oz Orange Juice, and 1.5oz Cranberry Juice in a highball glass filled with ice. Garnish with orange slice.',
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+cocktailSeedArray.push(sexOnTheBeach);
+
+const tequilaSunrise= {
+  name: 'Tequila Sunrise',
+  imgUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Tequila_Sunrise_glass.jpg/220px-Tequila_Sunrise_glass.jpg',
+  blurb: 'Pour 1.5oz Tequila and 3oz Orange Juice into glass over ice. Add 0.5oz Grenadine, which will sink to the bottom. Stir gently to create the sunrise effect. Garnish and serve.',
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+cocktailSeedArray.push(tequilaSunrise);
+
+const french75= {
+  name: 'French 75',
+  imgUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/French_75.jpg/220px-French_75.jpg',
+  blurb: 'Combine 1oz Gin, a splash of Simple Syrup, and 0.5oz Lemon Juice in a cocktail shaker filled with ice. Shake vigorously and strain into a chilled champagne glass. Top up with 4oz Champagne. Stir gently.',
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+cocktailSeedArray.push(french75);
+
+const mintJulep= {
+  name: 'Mint Julep',
+  imgUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Mint_Julep_im_Silberbecher.jpg/220px-Mint_Julep_im_Silberbecher.jpg',
+  blurb: 'In a highball glass gently muddle 4 Mint Leaves, a teaspoon of Sugar, and 2 teaspoons of water. Fill the glass with cracked ice, add 1.5oz Bourbon and stir well until the glass is well frosted. Garnish with a mint sprig.',
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+cocktailSeedArray.push(mintJulep);
+
+const seaBreeze= {
+  name: 'Sea Breeze',
+  imgUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Cocktail_with_vodka.jpg/220px-Cocktail_with_vodka.jpg',
+  blurb: 'Build 1.5oz Vodka, 4.5oz Cranberry Juice, and 1oz Grapefruit Juice in a highball glass filled with ice. Garnish with lime wedge.',
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+cocktailSeedArray.push(seaBreeze);
+
+const irishCoffee= {
+  name: 'Irish Coffee',
+  imgUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Irish_coffee_glass.jpg/220px-Irish_coffee_glass.jpg',
+  blurb: 'Heat 3oz coffee, 1.5oz whiskey and a teaspoon of sugar; do not boil. Pour into glass and top with cream; serve hot.',
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+cocktailSeedArray.push(irishCoffee);
+
+const grasshopper= {
+  name: 'Grasshopper',
+  imgUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Grasshopper_cocktail.jpg/220px-Grasshopper_cocktail.jpg',
+  blurb: 'Pour 1oz creme de menthe, 1oz creme de cacao, and 1oz cream into a cocktail shaker with ice. Shake briskly and then strain into a chilled cocktail glass.',
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+cocktailSeedArray.push(grasshopper);
+
+const hemingwaySpecial= {
+  name: 'Hemingway Special',
+  imgUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Hemingway_Daiquiri.jpg/220px-Hemingway_Daiquiri.jpg',
+  blurb: 'Pour 2oz White Rum, 1.25oz Grapefruit Juice, 0.5oz Maraschino Liqueur, and 0.5oz Lime Juice into a shaker with ice. Shake.',
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+cocktailSeedArray.push(hemingwaySpecial);
+
+const darkNStormy= {
+  name: 'Dark \'n\' Stormy',
+  imgUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/DarknStormy.jpg/220px-DarknStormy.jpg',
+  blurb: 'Fill glass with ice, add 3.5oz Ginger Beer and top with 2oz Dark Rum. Garnish with lime wedge.',
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+cocktailSeedArray.push(darkNStormy);
+
+const paloma= {
+  name: 'Paloma',
+  imgUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/TequilaPaloma.JPG/220px-TequilaPaloma.JPG',
+  blurb: '	Pour 1.5oz Tequila into highball glass. Add a splash of Lime Juice. Add ice and a pinch of salt, then top with 4oz Grapefruit Soda and stir gently.',
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+cocktailSeedArray.push(paloma);
+
+const corpseReviver= {
+  name: 'Corpse Reviver',
+  imgUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Corpse_Reviver_2.jpg/220px-Corpse_Reviver_2.jpg',
+  blurb: 'Shake 1oz Gin, 1oz Lemon Juice, 1oz Triple Sec, 1oz Lillet Blanc, and a dash of Absinthe together in a mixer with ice. Strain into chilled cocktail glass. Garnish with orange zest.',
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+cocktailSeedArray.push(corpseReviver);
+
+
+const gimlet= {
+  name: 'Gimlet',
+  imgUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Gimlet_cocktail.jpg/220px-Gimlet_cocktail.jpg',
+  blurb: 'Mix 2oz Gin, 1oz Lime Juice, and 0.5oz Simple Syrup and serve in a cocktail. Garnish with a slice of lime',
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+cocktailSeedArray.push(gimlet);
+
+const spritzVeneziano= {
+  name: 'Spritz Veneziano',
+  imgUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Select_Spritz.jpg/220px-Select_Spritz.jpg',
+  blurb: 'Build 3oz Prosecco, 2oz Campari, and a splash of Carbonated Water into a wine glass filled with ice. Stir gently.',
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+cocktailSeedArray.push(spritzVeneziano);
+
+const bellini= {
+  name: 'Bellini',
+  imgUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Bellini_Cipriani%2C_Macaroni_Grill%2C_Dunwoody_GA.jpg/220px-Bellini_Cipriani%2C_Macaroni_Grill%2C_Dunwoody_GA.jpg',
+  blurb: 'Pour 1.5oz peach purée into chilled glass, add 3oz Prosecco. Stir gently.',
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+cocktailSeedArray.push(bellini);
 
 
 //===========================INGREDIENTS================================
@@ -467,6 +657,139 @@ const cremeDeMenthe = {
   updatedAt: new Date().toISOString(),
 }
 ingredientSeedArray.push(cremeDeMenthe); 
+
+const tequila = {
+  name: 'Tequila',
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+ingredientSeedArray.push(tequila); 
+
+const cola = {
+  name: 'Cola',
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+ingredientSeedArray.push(cola); 
+
+const champagne = {
+  name: 'Champagne',
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+ingredientSeedArray.push(champagne); 
+
+const mintLeaves = {
+  name: 'Mint Leaves',
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+ingredientSeedArray.push(mintLeaves); 
+
+const gingerBeer = {
+  name: 'Ginger Beer',
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+ingredientSeedArray.push(gingerBeer); 
+
+const coconutCream = {
+  name: 'Coconut Cream',
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+ingredientSeedArray.push(coconutCream); 
+
+const cranberryJuice = {
+  name: 'Cranberry Juice',
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+ingredientSeedArray.push(cranberryJuice); 
+
+const peachSchnapps = {
+  name: 'Peach Schnapps',
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+ingredientSeedArray.push(peachSchnapps); 
+
+const grenadine = {
+  name: 'Grenadine',
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+ingredientSeedArray.push(grenadine); 
+
+const grapefruitJuice = {
+  name: 'Grapefruit Juice',
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+ingredientSeedArray.push(grapefruitJuice); 
+
+const irishWhiskey = {
+  name: 'Irish Whiskey',
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+ingredientSeedArray.push(irishWhiskey); 
+
+const coffee = {
+  name: 'Coffee',
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+ingredientSeedArray.push(coffee); 
+
+const cream = {
+  name: 'Cream',
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+ingredientSeedArray.push(cream); 
+
+const darkRum= {
+  name: 'Dark Rum',
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+ingredientSeedArray.push(darkRum); 
+
+const grapeFruitSoda= {
+  name: 'Grapefruit Soda',
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+ingredientSeedArray.push(grapeFruitSoda); 
+
+const lilletBlanc= {
+  name: 'Lillet Blanc',
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+ingredientSeedArray.push(lilletBlanc); 
+
+const prosecco= {
+  name: 'Prosecco',
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+ingredientSeedArray.push(prosecco); 
+
+const peachPuree= {
+  name: 'Peach Puree',
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+ingredientSeedArray.push(peachPuree); 
+
+const pineappleJuice= {
+  name: 'Pineapple Juice',
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+ingredientSeedArray.push(pineappleJuice); 
 
 
 
@@ -1090,6 +1413,546 @@ const ws3 = {
 recipeSeedArray.push(ws1);
 recipeSeedArray.push(ws2);
 recipeSeedArray.push(ws3);
+
+const liit1 = {
+  cocktailId: 27,
+  ingredientId: 33,
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+const liit2 = {
+  cocktailId: 27,
+  ingredientId: 1,
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+const liit3 = {
+  cocktailId: 27,
+  ingredientId: 17,
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+const liit4 = {
+  cocktailId: 27,
+  ingredientId: 18,
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+const liit5 = {
+  cocktailId: 27,
+  ingredientId: 11,
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+const liit6 = {
+  cocktailId: 27,
+  ingredientId: 14,
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+const liit7 = {
+  cocktailId: 27,
+  ingredientId: 26,
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+const liit8 = {
+  cocktailId: 27,
+  ingredientId: 34,
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+recipeSeedArray.push(liit1);
+recipeSeedArray.push(liit2);
+recipeSeedArray.push(liit3);
+recipeSeedArray.push(liit4);
+recipeSeedArray.push(liit5);
+recipeSeedArray.push(liit6);
+recipeSeedArray.push(liit7);
+recipeSeedArray.push(liit8);
+
+const marg1 = {
+  cocktailId: 28,
+  ingredientId: 33,
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+const marg2 = {
+  cocktailId: 28,
+  ingredientId: 18,
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+const marg3 = {
+  cocktailId: 28,
+  ingredientId: 24,
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+recipeSeedArray.push(marg1);
+recipeSeedArray.push(marg2);
+recipeSeedArray.push(marg3);
+
+const mim1 = {
+  cocktailId: 29,
+  ingredientId: 35,
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+const mim2 = {
+  cocktailId: 29,
+  ingredientId: 4,
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+recipeSeedArray.push(mim1);
+recipeSeedArray.push(mim2);
+
+const moj1 = {
+  cocktailId: 30,
+  ingredientId: 17,
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+const moj2 = {
+  cocktailId: 30,
+  ingredientId: 24,
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+const moj3 = {
+  cocktailId: 30,
+  ingredientId: 36,
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+const moj4 = {
+  cocktailId: 30,
+  ingredientId: 26,
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+recipeSeedArray.push(moj1);
+recipeSeedArray.push(moj2);
+recipeSeedArray.push(moj3);
+recipeSeedArray.push(moj4);
+
+const mosc1 = {
+  cocktailId: 31,
+  ingredientId: 1,
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+const mosc2 = {
+  cocktailId: 31,
+  ingredientId: 24,
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+const mosc3 = {
+  cocktailId: 31,
+  ingredientId: 37,
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+recipeSeedArray.push(mosc1);
+recipeSeedArray.push(mosc2);
+recipeSeedArray.push(mosc3);
+
+const pc1 = {
+  cocktailId: 32,
+  ingredientId: 17,
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+const pc2 = {
+  cocktailId: 32,
+  ingredientId: 38,
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+const pc3 = {
+  cocktailId: 32,
+  ingredientId: 51,
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+recipeSeedArray.push(pc1);
+recipeSeedArray.push(pc2);
+recipeSeedArray.push(pc3);
+
+const cos1 = {
+  cocktailId: 33,
+  ingredientId: 1,
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+const cos2 = {
+  cocktailId: 33,
+  ingredientId: 18,
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+const cos3 = {
+  cocktailId: 33,
+  ingredientId: 24,
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+const cos4 = {
+  cocktailId: 33,
+  ingredientId: 39,
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+recipeSeedArray.push(cos1);
+recipeSeedArray.push(cos2);
+recipeSeedArray.push(cos3);
+recipeSeedArray.push(cos4);
+
+const sob1 = {
+  cocktailId: 34,
+  ingredientId: 1,
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+const sob2 = {
+  cocktailId: 34,
+  ingredientId: 40,
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+const sob3 = {
+  cocktailId: 34,
+  ingredientId: 4,
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+const sob4 = {
+  cocktailId: 34,
+  ingredientId: 39,
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+
+recipeSeedArray.push(sob1);
+recipeSeedArray.push(sob2);
+recipeSeedArray.push(sob3);
+recipeSeedArray.push(sob4);
+
+const ts1 = {
+  cocktailId: 35,
+  ingredientId: 33,
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+const ts2 = {
+  cocktailId: 35,
+  ingredientId: 4,
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+const ts3 = {
+  cocktailId: 35,
+  ingredientId: 41,
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+recipeSeedArray.push(ts1);
+recipeSeedArray.push(ts2);
+recipeSeedArray.push(ts3);
+
+const f751 = {
+  cocktailId: 36,
+  ingredientId: 11,
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+const f752 = {
+  cocktailId: 36,
+  ingredientId: 26,
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+const f753 = {
+  cocktailId: 36,
+  ingredientId: 14,
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+const f754 = {
+  cocktailId: 36,
+  ingredientId: 35,
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+
+recipeSeedArray.push(f751);
+recipeSeedArray.push(f752);
+recipeSeedArray.push(f753);
+recipeSeedArray.push(f754);
+
+const mj1 = {
+  cocktailId: 37,
+  ingredientId: 19,
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+const mj2 = {
+  cocktailId: 37,
+  ingredientId: 36,
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+const mj3 = {
+  cocktailId: 37,
+  ingredientId: 25,
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+recipeSeedArray.push(mj1);
+recipeSeedArray.push(mj2);
+recipeSeedArray.push(mj3);
+
+const sb1 = {
+  cocktailId: 38,
+  ingredientId: 1,
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+const sb2 = {
+  cocktailId: 38,
+  ingredientId: 39,
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+const sb3 = {
+  cocktailId: 38,
+  ingredientId: 42,
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+
+recipeSeedArray.push(sb1);
+recipeSeedArray.push(sb2);
+recipeSeedArray.push(sb3);
+
+const ic1 = {
+  cocktailId: 39,
+  ingredientId: 43,
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+const ic2 = {
+  cocktailId: 39,
+  ingredientId: 44,
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+const ic3 = {
+  cocktailId: 39,
+  ingredientId: 45,
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+const ic4 = {
+  cocktailId: 39,
+  ingredientId: 25,
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+
+recipeSeedArray.push(ic1);
+recipeSeedArray.push(ic2);
+recipeSeedArray.push(ic3);
+recipeSeedArray.push(ic4);
+
+const gh1 = {
+  cocktailId: 40,
+  ingredientId: 32,
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+const gh2 = {
+  cocktailId: 40,
+  ingredientId: 6,
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+const gh3 = {
+  cocktailId: 40,
+  ingredientId: 45,
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+recipeSeedArray.push(gh1);
+recipeSeedArray.push(gh2);
+recipeSeedArray.push(gh3);
+
+const hs1 = {
+  cocktailId: 41,
+  ingredientId: 17,
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+const hs2 = {
+  cocktailId: 41,
+  ingredientId: 42,
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+const hs3 = {
+  cocktailId: 41,
+  ingredientId: 15,
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+const hs4 = {
+  cocktailId: 41,
+  ingredientId: 24,
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+recipeSeedArray.push(hs1);
+recipeSeedArray.push(hs2);
+recipeSeedArray.push(hs3);
+recipeSeedArray.push(hs4);
+
+const dns1 = {
+  cocktailId: 42,
+  ingredientId: 46,
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+const dns2 = {
+  cocktailId: 42,
+  ingredientId: 37,
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+recipeSeedArray.push(dns1);
+recipeSeedArray.push(dns2);
+
+const pal1 = {
+  cocktailId: 43,
+  ingredientId: 33,
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+const pal2 = {
+  cocktailId: 43,
+  ingredientId: 24,
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+const pal3 = {
+  cocktailId: 43,
+  ingredientId: 47,
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+recipeSeedArray.push(pal1);
+recipeSeedArray.push(pal2);
+recipeSeedArray.push(pal3);
+
+const corpse1 = {
+  cocktailId: 44,
+  ingredientId: 11,
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+const corpse2 = {
+  cocktailId: 44,
+  ingredientId: 14,
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+const corpse3 = {
+  cocktailId: 44,
+  ingredientId: 18,
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+const corpse4 = {
+  cocktailId: 44,
+  ingredientId: 48,
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+const corpse5 = {
+  cocktailId: 44,
+  ingredientId: 31,
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+
+recipeSeedArray.push(corpse1);
+recipeSeedArray.push(corpse2);
+recipeSeedArray.push(corpse3);
+recipeSeedArray.push(corpse4);
+recipeSeedArray.push(corpse5);
+
+const gim1 = {
+  cocktailId: 45,
+  ingredientId: 11,
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+const gim2 = {
+  cocktailId: 45,
+  ingredientId: 24,
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+const gim3 = {
+  cocktailId: 45,
+  ingredientId: 26,
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+
+recipeSeedArray.push(gim1);
+recipeSeedArray.push(gim2);
+recipeSeedArray.push(gim3);
+
+const sV1 = {
+  cocktailId: 46,
+  ingredientId: 49,
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+const sV2 = {
+  cocktailId: 46,
+  ingredientId: 8,
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+const sV3 = {
+  cocktailId: 46,
+  ingredientId: 10,
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+
+recipeSeedArray.push(sV1);
+recipeSeedArray.push(sV2);
+recipeSeedArray.push(sV3);
+
+const bell1 = {
+  cocktailId: 47,
+  ingredientId: 49,
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+const bell2 = {
+  cocktailId: 47,
+  ingredientId: 50,
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+}
+
+recipeSeedArray.push(bell1);
+recipeSeedArray.push(bell2);
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
