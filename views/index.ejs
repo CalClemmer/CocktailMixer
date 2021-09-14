@@ -51,7 +51,7 @@
             <li>
                 <!-- <a href="#"> <%= cocktail.name %> </a> -->
                 <p>
-                <button class="lookupCocktail" onClick="displayCocktail('<%=cocktail.imgUrl%>','<%=cocktail.id%>','<%=cocktail.blurb%>')">
+                <button class="lookupCocktail" onClick="displayCocktail('<%=cocktail.imgUrl%>','<%=cocktail.id%>','<%=cocktail.blurb%>','<%=cocktail.name%>')">
                     <%= cocktail.name%>
                 </button>
                 </p>
@@ -60,7 +60,7 @@
         </ul>
     </div>
     <div class="recipes">
-        <h2 class="center">Cocktail Info</h2>
+        <h2 id="tailheader" class="center">Cocktail Info</h2>
         <img id = "tail" class = "cocktailImage hide center" src = "#" width = 200>
         <div id = "recipe" class = "hide">
             <h3>Recipe:</h3> 
@@ -109,13 +109,13 @@ function searchBar() {
   }
 }
 
-function displayCocktail(cocktailImg, cocktailId, blurb) {
+function displayCocktail(cocktailImg, cocktailId, blurb, name) {
     document.getElementById('tail').src = cocktailImg;
     document.getElementById('tail').classList.remove('hide');
     document.getElementById('recipe').classList.remove('hide');
     document.getElementById('instructions').innerText = blurb;
-    console.log(cocktailId);
-    console.log(blurb);
+    document.getElementById('tailheader').innerText = name + ' Info';
+    
 }
 
 
